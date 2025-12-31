@@ -58,7 +58,7 @@ body {
 .logo img {
     height: 45px;
     width: 45px;
-    border-radius: 50%;
+    border-radius: 60%;
     object-fit: cover;
     border: 2px solid white;
     background: white;
@@ -344,3 +344,4 @@ footer {
 .about-block ul li {
     margin-bottom: 10px;
 }
+
