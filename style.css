@@ -1,49 +1,6 @@
-/* Programs Page */
-.programs-page {
-    padding: 60px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-.programs-page h1 {
-    text-align: center;
-    color: #0a8f3c;
-    margin-bottom: 10px;
-}
-
-.programs-page .intro {
-    text-align: center;
-    margin-bottom: 50px;
-    font-size: 17px;
-}
-
-.program-item {
-    background: #f4fdf7;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-}
-
-.program-item h2 {
-    color: #0a8f3c;
-    margin-bottom: 15px;
-}
-
-.program-item p {
-    margin-bottom: 15px;
-    line-height: 1.6;
-}
-
-.program-item .highlight {
-    font-weight: bold;
-    color: #0a8f3c;
-}
-
-.program-item .hashtags {
-    font-size: 14px;
-    color: #555;
-}
+/* =====================
+   GLOBAL RESET
+===================== */
 * {
     margin: 0;
     padding: 0;
@@ -55,18 +12,10 @@ body {
     background-color: #ffffff;
     color: #333;
 }
-.logo img {
-    height: 45px;
-    width: 45px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid white;
-    background: white;
-    padding: 2px;
-}
 
-
-/* Header */
+/* =====================
+   HEADER & NAVIGATION
+===================== */
 header {
     background: #0a8f3c;
     color: white;
@@ -77,8 +26,19 @@ header {
 }
 
 header .logo {
-    font-size: 22px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    background: white;
+    padding: 2px;
 }
 
 header nav a {
@@ -87,15 +47,17 @@ header nav a {
     margin-left: 20px;
     font-weight: 500;
 }
+
 header nav a:hover {
     text-decoration: underline;
 }
 
-/* Hero */
+/* =====================
+   HERO SECTION
+===================== */
 .hero {
     background: linear-gradient(rgba(10,143,60,0.85), rgba(10,143,60,0.85)),
                 url("images/bg.jpg") center/cover no-repeat;
-
     color: white;
     text-align: center;
     padding: 100px 20px;
@@ -111,6 +73,9 @@ header nav a:hover {
     margin-bottom: 25px;
 }
 
+/* =====================
+   BUTTONS
+===================== */
 .btn {
     background: #0a8f3c;
     color: white;
@@ -118,6 +83,7 @@ header nav a:hover {
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
+    display: inline-block;
 }
 
 .btn.white {
@@ -125,7 +91,9 @@ header nav a:hover {
     color: #0a8f3c;
 }
 
-/* About */
+/* =====================
+   ABOUT (HOME)
+===================== */
 .about {
     padding: 60px 20px;
     text-align: center;
@@ -136,7 +104,9 @@ header nav a:hover {
     margin-bottom: 15px;
 }
 
-/* Programs */
+/* =====================
+   PROGRAM CARDS (HOME)
+===================== */
 .programs {
     background: #f4fdf7;
     padding: 60px 20px;
@@ -168,7 +138,9 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
-/* CTA */
+/* =====================
+   CTA
+===================== */
 .cta {
     background: #0a8f3c;
     color: white;
@@ -180,7 +152,9 @@ header nav a:hover {
     margin-bottom: 10px;
 }
 
-/* Footer */
+/* =====================
+   FOOTER
+===================== */
 footer {
     background: #065f2c;
     color: white;
@@ -188,7 +162,10 @@ footer {
     padding: 15px;
     font-size: 14px;
 }
-/* Contact Page */
+
+/* =====================
+   CONTACT PAGE
+===================== */
 .contact {
     padding: 60px 20px;
     text-align: center;
@@ -216,7 +193,6 @@ footer {
     padding: 30px;
     border-radius: 8px;
     width: 320px;
-    text-align: left;
 }
 
 .contact-info h2,
@@ -254,7 +230,10 @@ footer {
 .contact-form button:hover {
     background: #066d2e;
 }
-/* Programs Page */
+
+/* =====================
+   PROGRAMS PAGE
+===================== */
 .programs-page {
     padding: 60px 20px;
     max-width: 1000px;
@@ -300,7 +279,10 @@ footer {
     font-size: 14px;
     color: #555;
 }
-/* About Page */
+
+/* =====================
+   ABOUT PAGE
+===================== */
 .about-page {
     padding: 60px 20px;
     max-width: 900px;
@@ -344,7 +326,10 @@ footer {
 .about-block ul li {
     margin-bottom: 10px;
 }
-/* Beautiful Photo Queue Slider */
+
+/* =====================
+   BEAUTIFUL PHOTO QUEUE
+===================== */
 .photo-queue {
     width: 100%;
     max-width: 1000px;
@@ -352,9 +337,9 @@ footer {
     margin: 40px auto;
     overflow: hidden;
     position: relative;
+    background: #f4fdf7;
 }
 
-/* soft fade on edges (beauty effect) */
 .photo-queue::before,
 .photo-queue::after {
     content: "";
@@ -367,53 +352,60 @@ footer {
 
 .photo-queue::before {
     left: 0;
-    background: linear-gradient(to right, #f4fdf7 0%, transparent 100%);
+    background: linear-gradient(to right, #f4fdf7, transparent);
 }
 
 .photo-queue::after {
     right: 0;
-    background: linear-gradient(to left, #f4fdf7 0%, transparent 100%);
+    background: linear-gradient(to left, #f4fdf7, transparent);
 }
 
 .photo-track {
     display: flex;
     gap: 16px;
-    animation: queueScroll 28s linear infinite;
+    animation: queueScroll 30s linear infinite;
 }
 
 .photo-track img {
     width: 260px;
-    height: 200px;
+    height: 180px;
     object-fit: cover;
     border-radius: 12px;
     flex-shrink: 0;
     box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    transition: transform 0.4s ease;
 }
 
-/* subtle zoom for center feel */
-.photo-track img:hover {
-    transform: scale(1.05);
-}
-
-/* smooth infinite movement */
 @keyframes queueScroll {
-    0% {
+    from {
         transform: translateX(0);
     }
-    100% {
-        transform: translateX(-50%);
+    to {
+        transform: translateX(-100%);
     }
 }
 
-/* Mobile optimization */
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
 @media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    header nav a {
+        margin-left: 12px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
     .photo-queue {
         height: 180px;
     }
 
     .photo-track img {
         width: 200px;
-        height: 150px;
+        height: 140px;
     }
 }
