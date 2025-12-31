@@ -58,7 +58,7 @@ body {
 .logo img {
     height: 45px;
     width: 45px;
-    border-radius: 60%;
+    border-radius: 50%;
     object-fit: cover;
     border: 2px solid white;
     background: white;
@@ -344,4 +344,76 @@ footer {
 .about-block ul li {
     margin-bottom: 10px;
 }
+/* Beautiful Photo Queue Slider */
+.photo-queue {
+    width: 100%;
+    max-width: 1000px;
+    height: 240px;
+    margin: 40px auto;
+    overflow: hidden;
+    position: relative;
+}
 
+/* soft fade on edges (beauty effect) */
+.photo-queue::before,
+.photo-queue::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    z-index: 2;
+}
+
+.photo-queue::before {
+    left: 0;
+    background: linear-gradient(to right, #f4fdf7 0%, transparent 100%);
+}
+
+.photo-queue::after {
+    right: 0;
+    background: linear-gradient(to left, #f4fdf7 0%, transparent 100%);
+}
+
+.photo-track {
+    display: flex;
+    gap: 16px;
+    animation: queueScroll 28s linear infinite;
+}
+
+.photo-track img {
+    width: 260px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    flex-shrink: 0;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    transition: transform 0.4s ease;
+}
+
+/* subtle zoom for center feel */
+.photo-track img:hover {
+    transform: scale(1.05);
+}
+
+/* smooth infinite movement */
+@keyframes queueScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+    .photo-queue {
+        height: 180px;
+    }
+
+    .photo-track img {
+        width: 200px;
+        height: 150px;
+    }
+}
